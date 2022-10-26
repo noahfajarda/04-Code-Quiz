@@ -5,13 +5,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- link external stylesheets -->
-    <title>Official Coding Quiz</title>
+    <link rel="stylesheet" href="./Assets/css/style.css">
+    <title>My Quiz App</title>
 </head>
 
 <body>
+    <header>
+        <div><a href="#" id="highScores" onclick="viewHighScores()">View High Scores</a></div>
+        <div><a href="#" id="mainBacktrack" onclick="backToMain()" style="display:none;">Back to Main</a></div>
+        <h2 id="wholeTimer">Timer: <span id="timer">0</span></h1>
+    </header>
 
+    <main>
+        <h1 id="question">The Ultimate Quiz</h1>
+
+        <p id="description">
+            Try to answer these questions as best you can. You have 150 seconds.
+        </p>
+
+        <button id="startQuizButton">Start Quiz</button>
+
+        <!-- choices (blank for now) -->
+        <div id="choices"></div>
+
+        <h3 id="userNameContainer" style="display:none;">
+            Enter Your Initials:
+            <input type="text" id="userName">
+            <button id="submitUser">Submit</button>
+        </h3>
+
+    </main>
 </body>
+<script src="./Assets/js/script.js"></script>
 
 </html>

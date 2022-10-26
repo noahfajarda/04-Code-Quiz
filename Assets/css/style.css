@@ -1,0 +1,45 @@
+#choices {
+    display: flex;
+    flex-direction: column;
+}
+
+/* header------------ */
+header {
+    display: flex;
+    justify-content: space-between;
+    height: 25px;
+}
+
+#wholeTimer {
+    display: inline-block;
+    margin: 0px;
+}
+
+#highScores, #highScores:visited,
+#mainBacktrack, #mainBacktrack:visited {
+    color: white;
+    background-color: rgba(0,0,0,.5);
+    margin: 14px;
+}
+
+#highScores:hover,
+#mainBacktrack:hover {
+    color: black;
+    background-color: rgba(0,0,0,.5);
+    margin: 14px;
+}
+
+/* body------------ */
+body {
+    background-image: linear-gradient(to right, yellow, grey, blue);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+}
+
+
+
+/* main------------ */
+main {
+    margin: auto;
+    width: 50%;
+}
