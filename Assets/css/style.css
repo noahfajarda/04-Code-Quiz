@@ -29,6 +29,7 @@ header {
 #mainBacktrack:hover {
     color: black;
     margin: 14px;
+    cursor: pointer;
 }
 
 /* body------------ */
@@ -68,10 +69,19 @@ button {
     font-size: 25px;
 }
 
+#userNameContainer {
+    font-size: 30px;
+}
+
+#userName {
+    font-size: 20px;
+}
+
 button:hover {
     background-color:#002ead;
     color: white;
     transition: 0.3s;
+    cursor: pointer;
 }
 button:not(:hover) {
     background-color:#e3dac9;
