@@ -12,4 +12,4 @@ This project is an attempt to create an algorithm to generate a password using u
 
 ## Link to Deployed Application
 
-https://noahfajarda.github.io/03-JavaScript-Password-Generator/
+https://noahfajarda.github.io/04-code-quiz-app/
