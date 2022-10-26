@@ -99,23 +99,36 @@ var viewHighScores = function() {
     wholeTimerEl.style = "display: none";
     startBtn.style = "display: none";
     highScores = retrieveHighScores();
+    descriptionEl.textContent = "";
+
+    // put highScores in descriptionEl
+    console.log(highScores);
 
     if (highScores) {
-        // parse array of objects
+        // parse string to turn intoarray of objects
         highScores = JSON.parse(highScores);
-        console.log(highScores[0]);
         
-    
+        // display highScores
         for (var i = 0; i < highScores.length; i++) {
-            console.log("test");
-            // var element = document.createElement("h1");
-            // element.textContent = highScores[i];
-            // document.body.appendChild(element);
+            var element = document.createElement("p");
+            element.textContent = highScores[i]["name"] + ": " + highScores[i]["score"];
+            descriptionEl.appendChild(element);
         }
-    }
 
-    descriptionEl.textContent = "this";
+    }
+    // clear highScores button
+    var clearButton = document.createElement("button");
+    clearButton.textContent = "Clear Scores";
+    descriptionEl.appendChild(clearButton);
+    clearButton.addEventListener("click", clearScores);
+    
 };
+
+var clearScores = function() {
+    localStorage.setItem("High Scores", "");
+    viewHighScores();
+};
+
 
 var backToMain = function() {
     headerEl.style = "justify-content: space-between";
@@ -166,14 +179,14 @@ var checkChoice = function(event) {
         questionCount++;
         // subtract time
         timeLeft = timeLeft - 10;
+        timeEl.textContent = timeLeft;
+        displayQuestion();
         if (timeLeft <= -1) {
             displayEnd();
             timeEl.textContent = "OUT OF TIME!";
-            mainEl.textContent = "GAME OVER";
+            questionEl.textContent = "GAME OVER";
             clearInterval(timeInterval);
         }
-        timeEl.textContent = timeLeft;
-        displayQuestion();
     }
 };
 
@@ -203,8 +216,17 @@ var displayEnd = function() {
 var saveGame = function() {
     // add score to highScores and user to local storage
     var userScore = {};
-    userScore[userInputEl.value] = finalScore;
+    userScore["name"] = userInputEl.value;
+    userScore["score"] = finalScore;
     highScores.push(userScore);
+
+    // sort highscores
+    highScores = highScores.sort(function(a,b) {
+        return b.score - a.score;
+    });
+
+    // check/show highScores array
+    console.log(highScores);
     
     questionEl.textContent = "You have entered your score. Play Again?";
     userInputContainer.style = "display: none";
