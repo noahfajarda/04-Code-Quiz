@@ -7,7 +7,8 @@ This project is an attempt to create an algorithm to generate a password using u
 ## Screenshot
 
 ![App Screenshot](https://github.com/noahfajarda/04-code-quiz-app/blob/main/Assets/image1.png)
-![App Screenshot](https://github.com/noahfajarda/03-JavaScript-Password-Generator/blob/main/Assets/Screen%20Shot%202022-10-14%20at%2011.00.22%20PM.png)
+![App Screenshot](https://github.com/noahfajarda/04-code-quiz-app/blob/main/Assets/image2.png)
+![App Screenshot](https://github.com/noahfajarda/04-code-quiz-app/blob/main/Assets/image3.png)
 
 ## Link to Deployed Application
 
