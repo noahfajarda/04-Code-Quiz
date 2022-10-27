@@ -47,6 +47,7 @@ body {
 main {
     margin: auto;
     width: 50%;
+    text-align: center;
 }
 
 main h1 {
@@ -103,6 +104,10 @@ button:not(:hover) {
 @media screen and (max-width: 807px) {
     button {
         height: 70px;
+    }
+
+    #question {
+        font-size: 40px;
     }
 }
 

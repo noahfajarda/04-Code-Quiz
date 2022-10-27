@@ -30,7 +30,7 @@ var questionList = [
         answer: "San Francisco 49ers/Kansas City Chiefs"
     },
     {
-        title: "In general, in order to add logic to a web application, you should use",
+        title: "In general, in order to add logic to a web application, you should use...",
         choices: ["Python", "C++", "Java", "JavaScript"],
         answer: "JavaScript"
     },
