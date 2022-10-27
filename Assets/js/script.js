@@ -98,24 +98,25 @@ var viewHighScores = function() {
     highScoresEl.style = "display: none";
     wholeTimerEl.style = "display: none";
     startBtn.style = "display: none";
+    userInputContainer.style = "display: none";
 
-    highScores = retrieveHighScores();
+    var highScoresObj = retrieveHighScores();
     descriptionEl.textContent = "";
     
     // change display none to block
     descriptionEl.style = "display: block";
 
     // put highScores in descriptionEl
-    console.log(highScores);
+    console.log(highScoresObj);
 
-    if (highScores) {
+    if (highScoresObj) {
         // parse string to turn intoarray of objects
-        highScores = JSON.parse(highScores);
+        highScoresObj = JSON.parse(highScoresObj);
         
         // display highScores
-        for (var i = 0; i < highScores.length; i++) {
+        for (var i = 0; i < highScoresObj.length; i++) {
             var element = document.createElement("p");
-            element.textContent = highScores[i]["name"] + ": " + highScores[i]["score"];
+            element.textContent = highScoresObj[i]["name"] + ": " + highScoresObj[i]["score"];
             descriptionEl.appendChild(element);
         }
 
