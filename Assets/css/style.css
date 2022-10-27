@@ -70,6 +70,10 @@ button {
 
 #description {
     font-size: 25px;
+    border-style: solid;
+    border-radius: 10px;
+    padding: 20px;
+    text-shadow: 2px 2px #ff0000;
 }
 
 #userNameContainer {

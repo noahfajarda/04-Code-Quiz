@@ -116,7 +116,7 @@ var viewHighScores = function() {
         // display highScores
         for (var i = 0; i < highScoresObj.length; i++) {
             var element = document.createElement("p");
-            element.textContent = highScoresObj[i]["name"] + ": " + highScoresObj[i]["score"];
+            element.textContent = (i + 1) + ". " + highScoresObj[i]["name"] + ": " + highScoresObj[i]["score"];
             descriptionEl.appendChild(element);
         }
 
