@@ -1,4 +1,4 @@
-// utility functionsighScores
+// utility functions HighScores
 var qs = function(tag) {
     return document.querySelector(tag);
 }
@@ -98,8 +98,12 @@ var viewHighScores = function() {
     highScoresEl.style = "display: none";
     wholeTimerEl.style = "display: none";
     startBtn.style = "display: none";
+
     highScores = retrieveHighScores();
     descriptionEl.textContent = "";
+    
+    // change display none to block
+    descriptionEl.style = "display: block";
 
     // put highScores in descriptionEl
     console.log(highScores);
@@ -148,7 +152,7 @@ var displayQuestion = function() {
         descriptionEl.style = "display: none";
     
         choicesEl.textContent = "";
-        // display answers for question
+        // display all 4 answers for question
         for (var i = 0; i < questionList[questionCount]["choices"].length; i++) {
             answer = document.createElement('button');
             answer.innerText = questionList[questionCount]["choices"][i];
@@ -169,7 +173,6 @@ var displayQuestion = function() {
 
 // check if user clicked the right answer for a question
 var checkChoice = function(event) {
-    // console.log(event.target);
     if (event.target.id === "correct") {
         correctAnswers++;
         questionCount++;
@@ -190,6 +193,7 @@ var checkChoice = function(event) {
     }
 };
 
+// at end of game: display score, play again & save scores options
 var displayEnd = function() {
     highScoresEl.style = "";
     finalScore = timeLeft.toString();
@@ -252,12 +256,13 @@ var startQuiz = function() {
     highScoresEl.style = "display: none";
     userInputContainer.style = "display: none";
 
-    // initialize count, correct/incorrect, timer again
+    // reset/initialize question count, timer, correct/incorrect answers
     questionCount = 0;
     timeLeft = 150;
     correctAnswers = 0;
     incorrectAnswers = 0;
 
+    // game state: game is running
     quizRun = true;
     displayQuestion();
 
