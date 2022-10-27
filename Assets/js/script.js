@@ -95,10 +95,10 @@ var viewHighScores = function() {
     headerEl.style = "justify-content: start";
     questionEl.textContent = "High Scores";
     mainBacktrackEl.style = "display: inline-block";
-    highScoresEl.style = "display: none";
-    wholeTimerEl.style = "display: none";
-    startBtn.style = "display: none";
-    userInputContainer.style = "display: none";
+    highScoresEl.style = wholeTimerEl.style = startBtn.style = userInputContainer.style = "display: none";
+    // wholeTimerEl.style = "display: none";
+    // startBtn.style = "display: none";
+    // userInputContainer.style = "display: none";
 
     var highScoresObj = retrieveHighScores();
     descriptionEl.textContent = "";
@@ -130,6 +130,7 @@ var viewHighScores = function() {
 };
 
 var clearScores = function() {
+    highScores = [];
     localStorage.setItem("High Scores", "");
     viewHighScores();
 };
@@ -139,9 +140,7 @@ var backToMain = function() {
     headerEl.style = "justify-content: space-between";
     questionEl.textContent = "The Ultimate Quiz";
     mainBacktrackEl.style = "display: none";
-    highScoresEl.style = "display: inline-block";
-    wholeTimerEl.style = "display: inline-block";
-    startBtn.style = "display: inline-block";
+    highScoresEl.style = wholeTimerEl.style = startBtn.style = "display: inline-block";
     descriptionEl.textContent = "Try to answer these questions as best you can. You have a certain amount of seconds.";
 };
 
@@ -253,9 +252,7 @@ var retrieveHighScores = function() {
 
 // start quiz
 var startQuiz = function() {
-    startBtn.style = "display: none";
-    highScoresEl.style = "display: none";
-    userInputContainer.style = "display: none";
+    startBtn.style = highScoresEl.style = userInputContainer.style = "display: none";
 
     // reset/initialize question count, timer, correct/incorrect answers
     questionCount = 0;
