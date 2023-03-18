@@ -9,7 +9,7 @@
     <title>My Quiz App</title>
 </head>
 
-<body>
+<body data-gameState="start">
     <header>
         <div><a href="#" id="highScores" onclick="viewHighScores()">View High Scores</a></div>
         <div><a href="#" id="mainBacktrack" onclick="backToMain()" style="display:none;">Back to Main</a></div>
@@ -28,7 +28,7 @@
         <!-- choices (blank for now) -->
         <div id="choices"></div>
 
-        <h3 id="userNameContainer" style="display:none;">
+        <h3 id="userNameContainer">
             Save Your Score! (Enter Your Initials):
             <input type="text" id="userName">
             <button id="submitUser">Submit</button>

@@ -1,3 +1,63 @@
+body[data-gameState="playing"] #highScores {
+    display: none;
+}
+
+body[data-gameState="playing"] #userNameContainer {
+    display: none;
+}
+
+body[data-gameState="playing"] #wholeTimer {
+    display: inline-block;
+}
+
+body[data-gameState="playing"] #startQuizButton {
+    display: none;
+}
+
+body[data-gameState="highscore"] #highScores {
+    display: none;
+}
+
+body[data-gameState="highscore"] #userNameContainer {
+    display: none;
+}
+
+body[data-gameState="highscore"] #wholeTimer {
+    display: none;
+}
+
+body[data-gameState="highscore"] #startQuizButton {
+    display: none;
+}
+
+body[data-gameState="enterInitials"] #userNameContainer {
+    display: inline-block
+}
+
+body[data-gameState="enterInitials"] #startQuizButton {
+    display: inline-block
+}
+
+body[data-gameState="start"] #highScores {
+    display: inline-block
+}
+
+body[data-gameState="start"] #userNameContainer {
+    display: none;
+}
+
+body[data-gameState="start"] #wholeTimer {
+    display: inline-block;
+}
+
+body[data-gameState="start"] #startQuizButton {
+    display: inline-block;
+}
+
+
+
+
+
 #choices {
     display: flex;
     flex-direction: column;
